@@ -70,7 +70,7 @@ verts = []
 
 angle = 0
 
-goal = (450, 550)
+goal = (400, 550)
 opp_goal = (150, 200)
 
 def dist_to(p1, p2):
@@ -347,14 +347,14 @@ def draw():
         #if(event.type == pygame.KEYDOWN or event.type == pygame.KEYUP):
          #   if(event.mod &
 
-    if(not training):
+    #if(not training):
         keys = pygame.key.get_pressed()
 
         if(keys[pygame.K_F3]):
             debug = True
         if(keys[pygame.K_F4]):
             debug = False
-
+    if(not training):
         if keys[pygame.K_w]:
             move_polygon(0,-1)
         if keys[pygame.K_s]:

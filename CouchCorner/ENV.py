@@ -51,7 +51,7 @@ class Couch_Env(gym.Env):
         if(get_surface_area() < 8500):
             return -100
 
-        if(dist_to_end() < 100):
+        if(dist_to_end() < 50):
             #return get_surface_area()/200
             return 1000
         #return get_surface_area()/2000 + (1/dist_to_end())*5000
@@ -86,7 +86,7 @@ class Couch_Env(gym.Env):
             self.num_time_ends += 1
             return self.get_obs(), reward, False, True, {}
 
-        if(dist_to_end() < 100):
+        if(dist_to_end() < 50):
             self.num_goal_reached_ends += 1
             return self.get_obs(), reward, True, False, {}
 
